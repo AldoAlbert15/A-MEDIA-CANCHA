@@ -1,3 +1,4 @@
+
 name: Actualizar partidos de A Media Cancha
 
 on:
@@ -35,8 +36,9 @@ jobs:
               )
 
           lima = ZoneInfo("America/Lima")
-          today = datetime.now(lima).date().isoformat()
-          season = datetime.now(lima).year
+          now = datetime.now(lima)
+          today = now.date().isoformat()
+          season = now.year
 
           leagues = {
               135: "Serie A",
@@ -89,8 +91,7 @@ jobs:
                   )
 
               for match in results:
-                  league = match.get("league", {})
-                  if league.get("id") != league_id:
+                  if match.get("league", {}).get("id") != league_id:
                       continue
 
                   match["league"]["name"] = display_name
@@ -107,7 +108,7 @@ jobs:
 
           output = {
               "date": today,
-              "updated_at": datetime.now(lima).isoformat(),
+              "updated_at": now.isoformat(),
               "matches": matches
           }
 
