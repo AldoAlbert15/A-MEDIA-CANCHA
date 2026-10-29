@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A MEDIA CANCHA | Estadísticas de fútbol</title>
+<meta name="description" content="Estadísticas, análisis y estimaciones de fútbol.">
+<style>
+:root{--red:#f02b40;--bg:#0b0b0e;--panel:#151519;--muted:#a6a6b1;--line:#292930}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:#f7f7f8;font:16px Arial,sans-serif}
+header{padding:20px 6%;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:12px}
+.logo{font-size:23px;font-weight:900;letter-spacing:-1px}
+.logo span{color:var(--red)}
+.tag{color:var(--muted);font-size:12px}
+main{max-width:1100px;margin:auto;padding:30px 18px}
+.hero{padding:28px 0 34px}
+.eyebrow{color:var(--red);font-size:12px;font-weight:bold;letter-spacing:2px}
+h1{font-size:clamp(34px,6vw,58px);line-height:1.05;margin:14px 0}
+h1 span{color:var(--red)}
+p{color:var(--muted);line-height:1.6}
+.notice{background:#241418;border:1px solid #642630;color:#ffc3ca;padding:12px;border-radius:9px;font-size:13px}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0}
+button,input{font:inherit}
+.filters button,.action{background:var(--panel);color:white;border:1px solid var(--line);border-radius:8px;padding:10px 13px;cursor:pointer}
+.filters button.active,.action{background:var(--red);border-color:var(--red);font-weight:bold}
+.section-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:26px 0 14px}
+h2{font-size:22px;margin:0}
+.count{color:var(--muted);font-size:13px}
+.matches{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:14px}
+.match{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px}
+.league{color:var(--red);font-size:12px;font-weight:bold;text-transform:uppercase}
+.time{float:right;color:var(--muted);font-size:12px}
+.teams{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:10px;margin:22px 0}
+.team{font-weight:bold;line-height:1.4}
+.team:last-child{text-align:right}
+.vs{color:var(--muted);font-size:12px}
+.prob{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin:16px 0}
+.prob div{background:#202026;border-radius:7px;padding:10px 5px;text-align:center}
+.prob strong{display:block;font-size:19px}
+.prob small{color:var(--muted);font-size:11px}
+.action{width:100%;margin-top:4px}
+.empty{color:var(--muted);padding:25px 0}
+footer{border-top:1px solid var(--line);padding:22px 18px;text-align:center;color:var(--muted);font-size:12px}
+#detail{margin-top:20px;padding:20px;background:var(--panel);border:1px solid var(--line);border-radius:12px}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">A MEDIA <span>CANCHA</span></div>
+  <div class="tag">FÚTBOL · DATOS · ANÁLISIS</div>
+</header>
+<main>
+  <section class="hero">
+    <div class="eyebrow">EL FÚTBOL, CON DATOS</div>
+    <h1>Más análisis.<br><span>Menos intuición.</span></h1>
+    <p>Explora partidos, compara equipos y descubre qué dicen las estadísticas.</p>
+  </section>
+
+  <div class="notice">
+    VERSIÓN INICIAL · Los partidos y porcentajes mostrados son ejemplos ficticios. Todavía no hay conexión con datos en vivo.
+  </div>
+
+  <div class="section-head">
+    <h2>Partidos</h2>
+    <span class="count">Demostración</span>
+  </div>
+
+  <div class="filters" id="filters">
+    <button class="active" data-league="Todas">Todas</button>
+    <button data-league="LaLiga">LaLiga</button>
+    <button data-league="Premier League">Premier League</button>
+    <button data-league="Champions League">Champions</button>
+    <button data-league="Serie A">Serie A</button>
+    <button data-league="Bundesliga">Bundesliga</button>
+    <button data-league="Ligue 1">Ligue 1</button>
+  </div>
+
+  <div class="matches" id="matches"></div>
+  <section id="detail" hidden aria-live="polite"></section>
+</main>
+<footer>
+  A MEDIA CANCHA · Proyecto independiente de estadísticas futbolísticas.
+  Las estimaciones no garantizan resultados.
+</footer>
+<script>
+const games = [
+ {league:"LaLiga",home:"Real Madrid",away:"Barcelona",time:"Ejemplo",p:[45,27,28],goals:"Más de 2.5: 58%"},
+ {league:"Premier League",home:"Arsenal",away:"Liverpool",time:"Ejemplo",p:[39,29,32],goals:"Más de 2.5: 61%"},
+ {league:"Champions League",home:"Bayern Múnich",away:"PSG",time:"Ejemplo",p:[42,25,33],goals:"Más de 2.5: 64%"},
+ {league:"Serie A",home:"Inter",away:"Juventus",time:"Ejemplo",p:[48,30,22],goals:"Más de 2.5: 46%"},
+ {league:"Bundesliga",home:"Bayern Múnich",away:"Dortmund",time:"Ejemplo",p:[55,23,22],goals:"Más de 2.5: 68%"},
+ {league:"Ligue 1",home:"PSG",away:"Marsella",time:"Ejemplo",p:[60,22,18],goals:"Más de 2.5: 57%"}
+];
+let selected = "Todas";
+const container = document.getElementById("matches");
+const detail = document.getElementById("detail");
+
+function render(){
+ const visible = games.filter(g=>selected==="Todas"||g.league===selected);
+ container.innerHTML = visible.map(g=>`
+ <article class="match">
+  <span class="league">${g.league}</span>
+  <span class="time">${g.time}</span>
+  <div class="teams">
+   <div class="team">${g.home}</div><div class="vs">VS</div>
+   <div class="team">${g.away}</div>
+  </div>
+  <div class="prob">
+   <div><strong>${g.p[0]}%</strong><small>Local</small></div>
+   <div><strong>${g.p[1]}%</strong><small>Empate</small></div>
+   <div><strong>${g.p[2]}%</strong><small>Visitante</small></div>
+  </div>
+  <button class="action" data-game="${g.home}">Ver análisis de ejemplo</button>
+ </article>`).join("");
+ container.querySelectorAll("[data-game]").forEach(btn=>{
+  btn.addEventListener("click",()=>{
+   const g=games.find(x=>x.home===btn.dataset.game);
+   detail.hidden=false;
+   detail.innerHTML=`<h2>${g.home} vs ${g.away}</h2>
+   <p>Competición: ${g.league}</p>
+   <h3>Mercado de goles</h3><p>${g.goals}</p>
+   <p>Probabilidades de demostración: local ${g.p[0]}%, empate ${g.p[1]}%, visitante ${g.p[2]}%.</p>
+   <p>Estos porcentajes son ficticios y no proceden de un modelo estadístico. Cuando conectemos datos reales, reemplazaremos este análisis.</p>
+   <button class="action" id="close">Cerrar análisis</button>`;
+   document.getElementById("close").onclick=()=>detail.hidden=true;
+   detail.scrollIntoView({behavior:"smooth",block:"start"});
+  });
+ });
+}
+document.querySelectorAll("[data-league]").forEach(btn=>{
+ btn.addEventListener("click",()=>{
+  selected=btn.dataset.league;
+  document.querySelectorAll("[data-league]").forEach(b=>b.classList.toggle("active",b===btn));
+  detail.hidden=true;
+  render();
+ });
+});
+render();
+</script>
+</body>
+</html>
