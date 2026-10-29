@@ -1,4 +1,3 @@
-
 name: Actualizar partidos de A Media Cancha
 
 on:
@@ -16,11 +15,10 @@ jobs:
       - name: Descargar repositorio
         uses: actions/checkout@v4
 
-      - name: Consultar partidos del día
+      - name: Consultar partidos del dia
         env:
           API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
         run: |
-          mkdir -p data
           python - <<'PY'
           import json
           import os
@@ -28,38 +26,58 @@ jobs:
           from datetime import datetime
           from zoneinfo import ZoneInfo
 
-          today = datetime.now(ZoneInfo("America/Lima")).date().isoformat()
+          key = os.environ.get("API_FOOTBALL_KEY")
+          if not key:
+              raise RuntimeError("Falta el secreto API_FOOTBALL_KEY.")
+
+          today = datetime.now(
+              ZoneInfo("America/Lima")
+          ).date().isoformat()
+
           url = (
               "https://v3.football.api-sports.io/fixtures"
               f"?date={today}&timezone=America%2FLima"
           )
-          req = urllib.request.Request(
+
+          request = urllib.request.Request(
               url,
-              headers={"x-apisports-key": os.environ["API_FOOTBALL_KEY"]}
+              headers={"x-apisports-key": key}
           )
 
-          with urllib.request.urlopen(req, timeout=30) as response:
-              data = json.load(response)
+          try:
+              with urllib.request.urlopen(request, timeout=30) as response:
+                  data = json.load(response)
+          except Exception as error:
+              raise RuntimeError(
+                  f"No se pudo consultar la API: {error}"
+              ) from None
 
           if data.get("errors"):
-          print("DETALLE DEL ERROR DE API-FOOTBALL:")
-          print(json.dumps(data["errors"], ensure_ascii=False))
-          raise RuntimeError(
-          "La API rechazó la consulta. Revisa el detalle anterior.")
+              print(
+                  "ERROR DE API:",
+                  json.dumps(data["errors"], ensure_ascii=False)
+              )
+              raise RuntimeError("La API rechazó la consulta.")
 
-if not isinstance(data.get("response"), list):
-    raise RuntimeError("La respuesta de la API tiene un formato inesperado.")
+          if not isinstance(data.get("response"), list):
+              raise RuntimeError("Formato de respuesta inesperado.")
 
           output = {
               "date": today,
-              "updated_at": datetime.now(ZoneInfo("America/Lima")).isoformat(),
-              "matches": data.get("response", [])
+              "updated_at": datetime.now(
+                  ZoneInfo("America/Lima")
+              ).isoformat(),
+              "matches": data["response"]
           }
 
-          with open("data/matches.json", "w", encoding="utf-8") as file:
+          os.makedirs("data", exist_ok=True)
+          with open(
+              "data/matches.json", "w", encoding="utf-8"
+          ) as file:
               json.dump(output, file, ensure_ascii=False, indent=2)
 
-          print(f"Partidos recibidos: {len(output['matches'])}")
+          print("Consulta completada.")
+          print("Partidos recibidos:", len(output["matches"]))
           PY
 
       - name: Guardar datos actualizados
@@ -68,7 +86,7 @@ if not isinstance(data.get("response"), list):
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/matches.json
           if git diff --cached --quiet; then
-            echo "No hay cambios que guardar."
+            echo "No hay cambios nuevos."
           else
             git commit -m "Actualizar partidos reales"
             git push
