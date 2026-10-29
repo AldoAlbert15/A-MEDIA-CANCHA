@@ -200,52 +200,55 @@ function render() {
       </article>`;
   }).join("");
 
+ 
   container.querySelectorAll("[data-index]").forEach(button => {
     button.addEventListener("click", () => {
       const g = visible[Number(button.dataset.index)];
-      const hasScore = g.goals.home !== null &&
-        g.goals.away !== null &&
-        g.goals.home !== undefined &&
-        g.goals.away !== undefined;
+
+      const hasScore =
+        g.goals.home != null && g.goals.away != null;
+
+      const homeStats = getLastFiveStats(
+        g.home, g.date, g.home, g.away
+      );
+
+      const awayStats = getLastFiveStats(
+        g.away, g.date, g.home, g.away
+      );
 
       detail.hidden = false;
+
       detail.innerHTML = `
         <h2>${g.home} vs ${g.away}</h2>
         <p><strong>Competición:</strong> ${g.league}</p>
         <p><strong>Fecha y hora de Perú:</strong> ${formatDate(g.date)}</p>
         <p><strong>Estado:</strong> ${statusText(g.status)}</p>
+
         ${hasScore
           ? `<p><strong>Resultado:</strong> ${g.goals.home} - ${g.goals.away}</p>`
           : `<p>El partido todavía no tiene resultado disponible.</p>`}
+
         ${g.round ? `<p><strong>Jornada:</strong> ${g.round}</p>` : ""}
         ${g.venue ? `<p><strong>Estadio:</strong> ${g.venue}</p>` : ""}
-        <h3>${name}</h3>
-      <p>Partidos analizados: ${s.played} de 5</p>
-      <p>Victorias: ${s.wins}</p>
-      <p>Empates: ${s.draws}</p>
-      <p>Derrotas: ${s.losses}</p>
-      <p>Goles a favor: ${s.goalsFor}</p>
-      <p>Goles en contra: ${s.goalsAgainst}</p>
-      <p>Últimos resultados: ${
-        s.results.length ? s.results.join(" · ") : "Sin datos suficientes"
-      }</p>
-    </section>
-  `;
 
-  return `
-    <h3>📊 Rendimiento en los últimos cinco partidos</h3>
-    <div class="stats-grid">
-      ${renderStats(g.home, homeStats)}
-      ${renderStats(g.away, awayStats)}
-    </div>
-  `;
-})()}
+        <h3>📊 Rendimiento en los últimos cinco partidos</h3>
+
+        <div class="stats-grid">
+          ${renderStats(g.home, homeStats)}
+          ${renderStats(g.away, awayStats)}
+        </div>
+
         <button class="action" id="close">Cerrar detalles</button>
       `;
+
       document.getElementById("close").onclick = () => {
         detail.hidden = true;
       };
-      detail.scrollIntoView({behavior:"smooth", block:"start"});
+
+      detail.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
     });
   });
 }
