@@ -42,7 +42,13 @@ jobs:
               data = json.load(response)
 
           if data.get("errors"):
-              raise RuntimeError("La API informó un error. Revisa la configuración.")
+          print("DETALLE DEL ERROR DE API-FOOTBALL:")
+          print(json.dumps(data["errors"], ensure_ascii=False))
+          raise RuntimeError(
+          "La API rechazó la consulta. Revisa el detalle anterior.")
+
+if not isinstance(data.get("response"), list):
+    raise RuntimeError("La respuesta de la API tiene un formato inesperado.")
 
           output = {
               "date": today,
