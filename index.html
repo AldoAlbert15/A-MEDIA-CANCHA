@@ -219,7 +219,27 @@ function render() {
           : `<p>El partido todavía no tiene resultado disponible.</p>`}
         ${g.round ? `<p><strong>Jornada:</strong> ${g.round}</p>` : ""}
         ${g.venue ? `<p><strong>Estadio:</strong> ${g.venue}</p>` : ""}
-        <p>Esta ficha muestra datos del partido. Las predicciones estadísticas se incorporarán cuando dispongamos de datos históricos suficientes.</p>
+        <h3>${name}</h3>
+      <p>Partidos analizados: ${s.played} de 5</p>
+      <p>Victorias: ${s.wins}</p>
+      <p>Empates: ${s.draws}</p>
+      <p>Derrotas: ${s.losses}</p>
+      <p>Goles a favor: ${s.goalsFor}</p>
+      <p>Goles en contra: ${s.goalsAgainst}</p>
+      <p>Últimos resultados: ${
+        s.results.length ? s.results.join(" · ") : "Sin datos suficientes"
+      }</p>
+    </section>
+  `;
+
+  return `
+    <h3>📊 Rendimiento en los últimos cinco partidos</h3>
+    <div class="stats-grid">
+      ${renderStats(g.home, homeStats)}
+      ${renderStats(g.away, awayStats)}
+    </div>
+  `;
+})()}
         <button class="action" id="close">Cerrar detalles</button>
       `;
       document.getElementById("close").onclick = () => {
