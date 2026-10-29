@@ -252,6 +252,19 @@ function render() {
     });
   });
 }
+  function renderStats(teamName, stats) {
+  return `
+    <section class="stats-card">
+      <h4>${teamName}</h4>
+      <p>Partidos analizados: ${stats.played} de 5</p>
+      <p>Victorias: ${stats.wins}</p>
+      <p>Empates: ${stats.draws}</p>
+      <p>Derrotas: ${stats.losses}</p>
+      <p>Goles a favor: ${stats.goalsFor}</p>
+      <p>Goles en contra: ${stats.goalsAgainst}</p>
+      <p>Últimos resultados: ${stats.results.length ? stats.results.join(" · ") : "Sin datos suficientes"}</p>
+    </section>`;
+}
 function getLastFiveStats(teamName, currentMatchDate, currentHome, currentAway) {
   const completedStatuses = ["FT", "AET", "PEN"];
 
