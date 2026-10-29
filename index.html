@@ -229,7 +229,74 @@ function render() {
     });
   });
 }
+function getLastFiveStats(teamName, currentMatchDate, currentHome, currentAway) {
+  const completedStatuses = ["FT", "AET", "PEN"];
 
+  const teamMatches = games
+    .filter(match => {
+      const isHome = match.home === teamName;
+      const isAway = match.away === teamName;
+
+      if (!isHome && !isAway) return false;
+
+      // Solo partidos terminados con marcador disponible
+      if (!completedStatuses.includes(match.status)) return false;
+
+      if (
+        match.goals?.home == null ||
+        match.goals?.away == null
+      ) return false;
+
+      // Excluir el partido que estamos consultando
+      if (
+        match.date === currentMatchDate &&
+        match.home === currentHome &&
+        match.away === currentAway
+      ) return false;
+
+      return true;
+    })
+    .sort((a, b) => new Date(b.date) - new Date(a.date))
+    .slice(0, 5);
+
+  const stats = {
+    played: teamMatches.length,
+    wins: 0,
+    draws: 0,
+    losses: 0,
+    goalsFor: 0,
+    goalsAgainst: 0,
+    results: []
+  };
+
+  teamMatches.forEach(match => {
+    const isHome = match.home === teamName;
+
+    const scored = isHome
+      ? match.goals.home
+      : match.goals.away;
+
+    const conceded = isHome
+      ? match.goals.away
+      : match.goals.home;
+
+    stats.goalsFor += scored;
+    stats.goalsAgainst += conceded;
+
+    if (scored > conceded) {
+      stats.wins++;
+      stats.results.push("Victoria");
+    } else if (scored === conceded) {
+      stats.draws++;
+      stats.results.push("Empate");
+    } else {
+      stats.losses++;
+      stats.results.push("Derrota");
+    }
+  });
+
+  return stats;
+}
 async function loadMatches() {
   notice.textContent = "Actualizando partidos...";
   container.innerHTML = '<div class="empty">Cargando datos reales...</div>';
