@@ -11,11 +11,12 @@ permissions:
 jobs:
   actualizar:
     runs-on: ubuntu-latest
+
     steps:
       - name: Descargar repositorio
         uses: actions/checkout@v4
 
-      - name: Consultar partidos del dia
+      - name: Consultar partidos de las tres competiciones
         env:
           API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
         run: |
@@ -25,57 +26,101 @@ jobs:
           import urllib.request
           from datetime import datetime
           from zoneinfo import ZoneInfo
+          from urllib.parse import urlencode
 
           key = os.environ.get("API_FOOTBALL_KEY")
           if not key:
-              raise RuntimeError("Falta el secreto API_FOOTBALL_KEY.")
-
-          today = datetime.now(
-              ZoneInfo("America/Lima")
-          ).date().isoformat()
-
-          url = (
-              "https://v3.football.api-sports.io/fixtures"
-              f"?date={today}&timezone=America%2FLima"
-          )
-
-          request = urllib.request.Request(
-              url,
-              headers={"x-apisports-key": key}
-          )
-
-          try:
-              with urllib.request.urlopen(request, timeout=30) as response:
-                  data = json.load(response)
-          except Exception as error:
               raise RuntimeError(
-                  f"No se pudo consultar la API: {error}"
-              ) from None
+                  "Falta el secreto API_FOOTBALL_KEY."
+              )
 
-          if data.get("errors"):
-              print("DETALLE DEL ERROR DE API-FOOTBALL:")
-              print(json.dumps(data["errors"], ensure_ascii=False))
-              raise RuntimeError("La API rechazó la consulta.")
+          lima = ZoneInfo("America/Lima")
+          today = datetime.now(lima).date().isoformat()
+          season = datetime.now(lima).year
 
-          if not isinstance(data.get("response"), list):
-              raise RuntimeError("Formato de respuesta inesperado.")
+          leagues = {
+              135: "Serie A",
+              2: "UEFA Champions League",
+              281: "Liga 1 Perú"
+          }
+
+          matches = []
+
+          for league_id, display_name in leagues.items():
+              params = urlencode({
+                  "date": today,
+                  "league": league_id,
+                  "season": season,
+                  "timezone": "America/Lima"
+              })
+
+              url = (
+                  "https://v3.football.api-sports.io/fixtures?"
+                  + params
+              )
+
+              request = urllib.request.Request(
+                  url,
+                  headers={"x-apisports-key": key}
+              )
+
+              try:
+                  with urllib.request.urlopen(
+                      request, timeout=30
+                  ) as response:
+                      data = json.load(response)
+              except Exception as error:
+                  raise RuntimeError(
+                      f"Error consultando {display_name}: {error}"
+                  ) from None
+
+              if data.get("errors"):
+                  raise RuntimeError(
+                      f"Error de API en {display_name}: "
+                      + json.dumps(
+                          data["errors"], ensure_ascii=False
+                      )
+                  )
+
+              results = data.get("response")
+              if not isinstance(results, list):
+                  raise RuntimeError(
+                      f"Respuesta inválida para {display_name}."
+                  )
+
+              for match in results:
+                  league = match.get("league", {})
+                  if league.get("id") != league_id:
+                      continue
+
+                  match["league"]["name"] = display_name
+                  matches.append(match)
+
+              print(
+                  f"{display_name}: "
+                  f"{sum(1 for m in matches if m.get('league', {}).get('id') == league_id)} partidos"
+              )
+
+          matches.sort(
+              key=lambda m: m.get("fixture", {}).get("date", "")
+          )
 
           output = {
               "date": today,
-              "updated_at": datetime.now(
-                  ZoneInfo("America/Lima")
-              ).isoformat(),
-              "matches": data["response"]
+              "updated_at": datetime.now(lima).isoformat(),
+              "matches": matches
           }
 
           os.makedirs("data", exist_ok=True)
           with open(
               "data/matches.json", "w", encoding="utf-8"
           ) as file:
-              json.dump(output, file, ensure_ascii=False, indent=2)
+              json.dump(
+                  output, file, ensure_ascii=False, indent=2
+              )
 
           print("Consulta completada.")
-          print("Partidos recibidos:", len(output["matches"]))
+          print("Total de partidos:", len(matches))
           PY
 
       - name: Guardar datos actualizados
@@ -86,6 +131,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No hay cambios nuevos."
           else
-            git commit -m "Actualizar partidos reales"
+            git commit -m "Actualizar partidos de las tres ligas"
             git push
           fi
