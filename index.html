@@ -161,19 +161,34 @@ function isFinished(status) {
 }
 
 function render() {
-  const visible = games.filter(g =>
-    selected === "Todas" || g.league === selected
-  );
+  const today = new Intl.DateTimeFormat("en-CA", {
+  timeZone: "America/Lima",
+  year: "numeric",
+  month: "2-digit",
+  day: "2-digit"
+}).format(new Date());
 
-  if (!visible.length) {
-    container.innerHTML = `
-      <div class="empty">
-        No hay partidos disponibles para esta competición en la fecha consultada.
-        Prueba otra liga o vuelve a consultar más tarde.
-      </div>`;
-    detail.hidden = true;
-    return;
-  }
+const visible = games.filter(g => {
+  const matchDay = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "America/Lima",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit"
+  }).format(new Date(g.date));
+
+  return matchDay >= today &&
+    (selected === "Todas" || g.league === selected);
+});
+
+if (!visible.length) {
+  container.innerHTML = `
+    <div class="empty">
+      No hay partidos de hoy en adelante para esta competición.
+      Prueba otra liga o vuelve a consultar más tarde.
+    </div>`;
+  detail.hidden = true;
+  return;
+}
 
   container.innerHTML = visible.map((g, index) => {
     const hasScore = g.goals.home !== null &&
