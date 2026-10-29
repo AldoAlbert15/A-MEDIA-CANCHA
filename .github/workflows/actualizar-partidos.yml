@@ -37,8 +37,9 @@ jobs:
 
           lima = ZoneInfo("America/Lima")
           now = datetime.now(lima)
-          date_from = (now.date() - timedelta(days=1)).isoformat()
+          date_from = (now.date() - timedelta(days=45)).isoformat()
           date_to = (now.date() + timedelta(days=7)).isoformat()
+        
 
           competitions = {
               "SA": "Serie A",
