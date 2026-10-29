@@ -53,10 +53,8 @@ jobs:
               ) from None
 
           if data.get("errors"):
-              print(
-                  "ERROR DE API:",
-                  json.dumps(data["errors"], ensure_ascii=False)
-              )
+              print("DETALLE DEL ERROR DE API-FOOTBALL:")
+              print(json.dumps(data["errors"], ensure_ascii=False))
               raise RuntimeError("La API rechazó la consulta.")
 
           if not isinstance(data.get("response"), list):
