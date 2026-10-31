@@ -1,6 +1,6 @@
 {
   "date": "2026-10-31",
-  "updated_at": "2026-10-31T02:12:34.317449-05:00",
+  "updated_at": "2026-10-31T08:06:16.881490-05:00",
   "source": "football-data.org",
   "matches": [
     {
@@ -5224,8 +5224,8 @@
         "id": 560626,
         "date": "2026-10-31T12:30:00Z",
         "status": {
-          "short": "NS",
-          "long": "TIMED"
+          "short": "LIVE",
+          "long": "IN_PLAY"
         }
       },
       "teams": {
@@ -5241,8 +5241,8 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "league": {
         "id": "PL",
