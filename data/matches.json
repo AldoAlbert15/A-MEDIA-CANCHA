@@ -1,6 +1,6 @@
 {
   "date": "2026-10-30",
-  "updated_at": "2026-10-30T14:02:11.296933-05:00",
+  "updated_at": "2026-10-30T20:19:15.854242-05:00",
   "source": "football-data.org",
   "matches": [
     {
@@ -5192,8 +5192,8 @@
         "id": 565846,
         "date": "2026-10-30T19:30:00Z",
         "status": {
-          "short": "NS",
-          "long": "TIMED"
+          "short": "FT",
+          "long": "FINISHED"
         }
       },
       "teams": {
@@ -5209,8 +5209,8 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 4,
+        "away": 1
       },
       "league": {
         "id": "BL1",
