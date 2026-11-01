@@ -1,6 +1,6 @@
 {
   "date": "2026-10-31",
-  "updated_at": "2026-10-31T13:59:54.962978-05:00",
+  "updated_at": "2026-10-31T20:27:05.432064-05:00",
   "source": "football-data.org",
   "matches": [
     {
@@ -5288,8 +5288,8 @@
         "id": 565839,
         "date": "2026-10-31T14:30:00Z",
         "status": {
-          "short": "NS",
-          "long": "TIMED"
+          "short": "FT",
+          "long": "FINISHED"
         }
       },
       "teams": {
@@ -5305,8 +5305,8 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "league": {
         "id": "BL1",
@@ -5320,8 +5320,8 @@
         "id": 565840,
         "date": "2026-10-31T14:30:00Z",
         "status": {
-          "short": "NS",
-          "long": "TIMED"
+          "short": "FT",
+          "long": "FINISHED"
         }
       },
       "teams": {
@@ -5337,8 +5337,8 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 2
       },
       "league": {
         "id": "BL1",
@@ -5352,8 +5352,8 @@
         "id": 565842,
         "date": "2026-10-31T14:30:00Z",
         "status": {
-          "short": "NS",
-          "long": "TIMED"
+          "short": "FT",
+          "long": "FINISHED"
         }
       },
       "teams": {
@@ -5369,8 +5369,8 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 2
       },
       "league": {
         "id": "BL1",
@@ -5384,8 +5384,8 @@
         "id": 565843,
         "date": "2026-10-31T14:30:00Z",
         "status": {
-          "short": "NS",
-          "long": "TIMED"
+          "short": "FT",
+          "long": "FINISHED"
         }
       },
       "teams": {
@@ -5401,8 +5401,8 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 2,
+        "away": 0
       },
       "league": {
         "id": "BL1",
@@ -5416,8 +5416,8 @@
         "id": 565847,
         "date": "2026-10-31T14:30:00Z",
         "status": {
-          "short": "NS",
-          "long": "TIMED"
+          "short": "FT",
+          "long": "FINISHED"
         }
       },
       "teams": {
@@ -5433,8 +5433,8 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 2,
+        "away": 4
       },
       "league": {
         "id": "BL1",
@@ -5640,8 +5640,8 @@
         "id": 565845,
         "date": "2026-10-31T17:30:00Z",
         "status": {
-          "short": "NS",
-          "long": "TIMED"
+          "short": "FT",
+          "long": "FINISHED"
         }
       },
       "teams": {
@@ -5657,8 +5657,8 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 2,
+        "away": 2
       },
       "league": {
         "id": "BL1",
@@ -5672,8 +5672,8 @@
         "id": 560627,
         "date": "2026-10-31T17:30:00Z",
         "status": {
-          "short": "LIVE",
-          "long": "IN_PLAY"
+          "short": "FT",
+          "long": "FINISHED"
         }
       },
       "teams": {
@@ -5689,7 +5689,7 @@
         }
       },
       "goals": {
-        "home": 1,
+        "home": 2,
         "away": 0
       },
       "league": {
@@ -5704,8 +5704,8 @@
         "id": 558548,
         "date": "2026-10-31T19:45:00Z",
         "status": {
-          "short": "NS",
-          "long": "TIMED"
+          "short": "FT",
+          "long": "FINISHED"
         }
       },
       "teams": {
@@ -5721,8 +5721,8 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 3,
+        "away": 1
       },
       "league": {
         "id": "SA",
@@ -5736,8 +5736,8 @@
         "id": 560628,
         "date": "2026-10-31T20:00:00Z",
         "status": {
-          "short": "NS",
-          "long": "TIMED"
+          "short": "FT",
+          "long": "FINISHED"
         }
       },
       "teams": {
@@ -5753,8 +5753,8 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 1
       },
       "league": {
         "id": "PL",
