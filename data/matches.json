@@ -1,6 +1,6 @@
 {
   "date": "2026-11-01",
-  "updated_at": "2026-11-01T08:08:27.504441-05:00",
+  "updated_at": "2026-11-01T14:00:01.952078-05:00",
   "source": "football-data.org",
   "matches": [
     {
@@ -5768,8 +5768,8 @@
         "id": 558543,
         "date": "2026-11-01T11:30:00Z",
         "status": {
-          "short": "LIVE",
-          "long": "IN_PLAY"
+          "short": "NS",
+          "long": "TIMED"
         }
       },
       "teams": {
@@ -5785,8 +5785,8 @@
         }
       },
       "goals": {
-        "home": 1,
-        "away": 0
+        "home": null,
+        "away": null
       },
       "league": {
         "id": "SA",
@@ -5864,8 +5864,8 @@
         "id": 565841,
         "date": "2026-11-01T14:30:00Z",
         "status": {
-          "short": "NS",
-          "long": "TIMED"
+          "short": "FT",
+          "long": "FINISHED"
         }
       },
       "teams": {
@@ -5881,8 +5881,8 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 1
       },
       "league": {
         "id": "BL1",
@@ -5896,8 +5896,8 @@
         "id": 565844,
         "date": "2026-11-01T16:30:00Z",
         "status": {
-          "short": "NS",
-          "long": "TIMED"
+          "short": "FT",
+          "long": "FINISHED"
         }
       },
       "teams": {
@@ -5913,8 +5913,8 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 3,
+        "away": 1
       },
       "league": {
         "id": "BL1",
@@ -5928,8 +5928,8 @@
         "id": 560631,
         "date": "2026-11-01T16:30:00Z",
         "status": {
-          "short": "NS",
-          "long": "TIMED"
+          "short": "FT",
+          "long": "FINISHED"
         }
       },
       "teams": {
@@ -5945,8 +5945,8 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 1
       },
       "league": {
         "id": "PL",
