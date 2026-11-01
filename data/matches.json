@@ -1,6 +1,6 @@
 {
   "date": "2026-11-01",
-  "updated_at": "2026-11-01T02:19:41.946502-05:00",
+  "updated_at": "2026-11-01T08:08:27.504441-05:00",
   "source": "football-data.org",
   "matches": [
     {
@@ -5768,8 +5768,8 @@
         "id": 558543,
         "date": "2026-11-01T11:30:00Z",
         "status": {
-          "short": "NS",
-          "long": "TIMED"
+          "short": "LIVE",
+          "long": "IN_PLAY"
         }
       },
       "teams": {
@@ -5785,8 +5785,8 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 0
       },
       "league": {
         "id": "SA",
