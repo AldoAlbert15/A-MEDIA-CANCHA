@@ -1,6 +1,6 @@
 {
   "date": "2026-11-03",
-  "updated_at": "2026-11-03T08:25:01.121093-05:00",
+  "updated_at": "2026-11-03T14:12:32.683097-05:00",
   "source": "football-data.org",
   "matches": [
     {
@@ -6024,8 +6024,8 @@
         "id": 575377,
         "date": "2026-11-03T17:45:00Z",
         "status": {
-          "short": "NS",
-          "long": "TIMED"
+          "short": "LIVE",
+          "long": "IN_PLAY"
         }
       },
       "teams": {
@@ -6041,8 +6041,8 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 1
       },
       "league": {
         "id": "CL",
@@ -6056,8 +6056,8 @@
         "id": 575378,
         "date": "2026-11-03T17:45:00Z",
         "status": {
-          "short": "NS",
-          "long": "TIMED"
+          "short": "LIVE",
+          "long": "IN_PLAY"
         }
       },
       "teams": {
@@ -6073,8 +6073,8 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 2,
+        "away": 0
       },
       "league": {
         "id": "CL",
