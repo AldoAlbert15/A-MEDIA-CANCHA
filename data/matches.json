@@ -1,6 +1,6 @@
 {
-  "date": "2026-11-17",
-  "updated_at": "2026-11-17T20:36:49.617774-05:00",
+  "date": "2026-11-18",
+  "updated_at": "2026-11-18T02:37:17.529656-05:00",
   "source": "football-data.org",
   "matches": [
     {
@@ -7894,6 +7894,294 @@
           "id": 1899,
           "name": "PAE AEK",
           "logo": "https://crests.football-data.org/1899.png"
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "league": {
+        "id": "CL",
+        "name": "UEFA Champions League",
+        "country": "",
+        "round": 5
+      }
+    },
+    {
+      "fixture": {
+        "id": 575404,
+        "date": "2026-11-25T17:45:00Z",
+        "status": {
+          "short": "NS",
+          "long": "TIMED"
+        }
+      },
+      "teams": {
+        "home": {
+          "id": 10233,
+          "name": "Sabah FK",
+          "logo": "https://crests.football-data.org/10233.png"
+        },
+        "away": {
+          "id": 81,
+          "name": "FC Barcelona",
+          "logo": "https://crests.football-data.org/81.png"
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "league": {
+        "id": "CL",
+        "name": "UEFA Champions League",
+        "country": "",
+        "round": 5
+      }
+    },
+    {
+      "fixture": {
+        "id": 575405,
+        "date": "2026-11-25T17:45:00Z",
+        "status": {
+          "short": "NS",
+          "long": "TIMED"
+        }
+      },
+      "teams": {
+        "home": {
+          "id": 930,
+          "name": "SK Slavia Praha",
+          "logo": "https://crests.football-data.org/930.png"
+        },
+        "away": {
+          "id": 94,
+          "name": "Villarreal CF",
+          "logo": "https://crests.football-data.org/94.png"
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "league": {
+        "id": "CL",
+        "name": "UEFA Champions League",
+        "country": "",
+        "round": 5
+      }
+    },
+    {
+      "fixture": {
+        "id": 575406,
+        "date": "2026-11-25T20:00:00Z",
+        "status": {
+          "short": "NS",
+          "long": "TIMED"
+        }
+      },
+      "teams": {
+        "home": {
+          "id": 108,
+          "name": "FC Internazionale Milano",
+          "logo": "https://crests.football-data.org/108.png"
+        },
+        "away": {
+          "id": 10,
+          "name": "VfB Stuttgart",
+          "logo": "https://crests.football-data.org/10.png"
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "league": {
+        "id": "CL",
+        "name": "UEFA Champions League",
+        "country": "",
+        "round": 5
+      }
+    },
+    {
+      "fixture": {
+        "id": 575407,
+        "date": "2026-11-25T20:00:00Z",
+        "status": {
+          "short": "NS",
+          "long": "TIMED"
+        }
+      },
+      "teams": {
+        "home": {
+          "id": 78,
+          "name": "Club Atlético de Madrid",
+          "logo": "https://crests.football-data.org/78.png"
+        },
+        "away": {
+          "id": 5720,
+          "name": "Viking FK",
+          "logo": "https://crests.football-data.org/5720.png"
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "league": {
+        "id": "CL",
+        "name": "UEFA Champions League",
+        "country": "",
+        "round": 5
+      }
+    },
+    {
+      "fixture": {
+        "id": 575408,
+        "date": "2026-11-25T20:00:00Z",
+        "status": {
+          "short": "NS",
+          "long": "TIMED"
+        }
+      },
+      "teams": {
+        "home": {
+          "id": 524,
+          "name": "Paris Saint-Germain FC",
+          "logo": "https://crests.football-data.org/524.png"
+        },
+        "away": {
+          "id": 100,
+          "name": "AS Roma",
+          "logo": "https://crests.football-data.org/100.png"
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "league": {
+        "id": "CL",
+        "name": "UEFA Champions League",
+        "country": "",
+        "round": 5
+      }
+    },
+    {
+      "fixture": {
+        "id": 575409,
+        "date": "2026-11-25T20:00:00Z",
+        "status": {
+          "short": "NS",
+          "long": "TIMED"
+        }
+      },
+      "teams": {
+        "home": {
+          "id": 851,
+          "name": "Club Brugge KV",
+          "logo": "https://crests.football-data.org/851.png"
+        },
+        "away": {
+          "id": 64,
+          "name": "Liverpool FC",
+          "logo": "https://crests.football-data.org/64.png"
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "league": {
+        "id": "CL",
+        "name": "UEFA Champions League",
+        "country": "",
+        "round": 5
+      }
+    },
+    {
+      "fixture": {
+        "id": 575410,
+        "date": "2026-11-25T20:00:00Z",
+        "status": {
+          "short": "NS",
+          "long": "TIMED"
+        }
+      },
+      "teams": {
+        "home": {
+          "id": 521,
+          "name": "Lille OSC",
+          "logo": "https://crests.football-data.org/521.png"
+        },
+        "away": {
+          "id": 5,
+          "name": "FC Bayern München",
+          "logo": "https://crests.football-data.org/5.png"
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "league": {
+        "id": "CL",
+        "name": "UEFA Champions League",
+        "country": "",
+        "round": 5
+      }
+    },
+    {
+      "fixture": {
+        "id": 575411,
+        "date": "2026-11-25T20:00:00Z",
+        "status": {
+          "short": "NS",
+          "long": "TIMED"
+        }
+      },
+      "teams": {
+        "home": {
+          "id": 498,
+          "name": "Sporting Clube de Portugal",
+          "logo": "https://crests.football-data.org/498.png"
+        },
+        "away": {
+          "id": 66,
+          "name": "Manchester United FC",
+          "logo": "https://crests.football-data.org/66.png"
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "league": {
+        "id": "CL",
+        "name": "UEFA Champions League",
+        "country": "",
+        "round": 5
+      }
+    },
+    {
+      "fixture": {
+        "id": 575412,
+        "date": "2026-11-25T20:00:00Z",
+        "status": {
+          "short": "NS",
+          "long": "TIMED"
+        }
+      },
+      "teams": {
+        "home": {
+          "id": 1887,
+          "name": "FK Shakhtar Donetsk",
+          "logo": "https://crests.football-data.org/1887.png"
+        },
+        "away": {
+          "id": 613,
+          "name": "Fenerbahçe SK",
+          "logo": "https://crests.football-data.org/613.png"
         }
       },
       "goals": {
