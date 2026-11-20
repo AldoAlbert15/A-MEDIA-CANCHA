@@ -1,6 +1,6 @@
 {
-  "date": "2026-11-19",
-  "updated_at": "2026-11-19T20:27:45.827069-05:00",
+  "date": "2026-11-20",
+  "updated_at": "2026-11-20T02:38:20.506694-05:00",
   "source": "football-data.org",
   "matches": [
     {
@@ -8193,6 +8193,102 @@
         "name": "UEFA Champions League",
         "country": "",
         "round": 5
+      }
+    },
+    {
+      "fixture": {
+        "id": 565869,
+        "date": "2026-11-27T19:30:00Z",
+        "status": {
+          "short": "NS",
+          "long": "TIMED"
+        }
+      },
+      "teams": {
+        "home": {
+          "id": 12,
+          "name": "SV Werder Bremen",
+          "logo": "https://crests.football-data.org/12.png"
+        },
+        "away": {
+          "id": 18,
+          "name": "Borussia Mönchengladbach",
+          "logo": "https://crests.football-data.org/18.png"
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "league": {
+        "id": "BL1",
+        "name": "Bundesliga",
+        "country": "",
+        "round": 11
+      }
+    },
+    {
+      "fixture": {
+        "id": 558515,
+        "date": "2026-11-27T19:45:00Z",
+        "status": {
+          "short": "NS",
+          "long": "TIMED"
+        }
+      },
+      "teams": {
+        "home": {
+          "id": 454,
+          "name": "Venezia FC",
+          "logo": "https://crests.football-data.org/454.png"
+        },
+        "away": {
+          "id": 103,
+          "name": "Bologna FC 1909",
+          "logo": "https://crests.football-data.org/103.png"
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "league": {
+        "id": "SA",
+        "name": "Serie A",
+        "country": "",
+        "round": 13
+      }
+    },
+    {
+      "fixture": {
+        "id": 560658,
+        "date": "2026-11-27T20:00:00Z",
+        "status": {
+          "short": "NS",
+          "long": "TIMED"
+        }
+      },
+      "teams": {
+        "home": {
+          "id": 351,
+          "name": "Nottingham Forest FC",
+          "logo": "https://crests.football-data.org/351.png"
+        },
+        "away": {
+          "id": 61,
+          "name": "Chelsea FC",
+          "logo": "https://crests.football-data.org/61.png"
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "league": {
+        "id": "PL",
+        "name": "Premier League",
+        "country": "",
+        "round": 12
       }
     }
   ]
