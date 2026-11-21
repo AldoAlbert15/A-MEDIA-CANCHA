@@ -1,6 +1,6 @@
 {
-  "date": "2026-11-20",
-  "updated_at": "2026-11-20T20:31:57.030572-05:00",
+  "date": "2026-11-21",
+  "updated_at": "2026-11-21T02:29:50.918825-05:00",
   "source": "football-data.org",
   "matches": [
     {
@@ -8289,6 +8289,358 @@
         "name": "Premier League",
         "country": "",
         "round": 12
+      }
+    },
+    {
+      "fixture": {
+        "id": 558513,
+        "date": "2026-11-28T14:00:00Z",
+        "status": {
+          "short": "NS",
+          "long": "TIMED"
+        }
+      },
+      "teams": {
+        "home": {
+          "id": 470,
+          "name": "Frosinone Calcio",
+          "logo": "https://crests.football-data.org/470.png"
+        },
+        "away": {
+          "id": 112,
+          "name": "Parma Calcio 1913",
+          "logo": "https://crests.football-data.org/112.png"
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "league": {
+        "id": "SA",
+        "name": "Serie A",
+        "country": "",
+        "round": 13
+      }
+    },
+    {
+      "fixture": {
+        "id": 565866,
+        "date": "2026-11-28T14:30:00Z",
+        "status": {
+          "short": "NS",
+          "long": "TIMED"
+        }
+      },
+      "teams": {
+        "home": {
+          "id": 1,
+          "name": "1. FC Köln",
+          "logo": "https://crests.football-data.org/1.png"
+        },
+        "away": {
+          "id": 719,
+          "name": "SV 07 Elversberg",
+          "logo": "https://crests.football-data.org/719.png"
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "league": {
+        "id": "BL1",
+        "name": "Bundesliga",
+        "country": "",
+        "round": 11
+      }
+    },
+    {
+      "fixture": {
+        "id": 565867,
+        "date": "2026-11-28T14:30:00Z",
+        "status": {
+          "short": "NS",
+          "long": "TIMED"
+        }
+      },
+      "teams": {
+        "home": {
+          "id": 15,
+          "name": "1. FSV Mainz 05",
+          "logo": "https://crests.football-data.org/15.png"
+        },
+        "away": {
+          "id": 28,
+          "name": "1. FC Union Berlin",
+          "logo": "https://crests.football-data.org/28.png"
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "league": {
+        "id": "BL1",
+        "name": "Bundesliga",
+        "country": "",
+        "round": 11
+      }
+    },
+    {
+      "fixture": {
+        "id": 565868,
+        "date": "2026-11-28T14:30:00Z",
+        "status": {
+          "short": "NS",
+          "long": "TIMED"
+        }
+      },
+      "teams": {
+        "home": {
+          "id": 29,
+          "name": "SC Paderborn 07",
+          "logo": "https://crests.football-data.org/29.png"
+        },
+        "away": {
+          "id": 6,
+          "name": "FC Schalke 04",
+          "logo": "https://crests.football-data.org/6.png"
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "league": {
+        "id": "BL1",
+        "name": "Bundesliga",
+        "country": "",
+        "round": 11
+      }
+    },
+    {
+      "fixture": {
+        "id": 565874,
+        "date": "2026-11-28T14:30:00Z",
+        "status": {
+          "short": "NS",
+          "long": "TIMED"
+        }
+      },
+      "teams": {
+        "home": {
+          "id": 7,
+          "name": "Hamburger SV",
+          "logo": "https://crests.football-data.org/7.png"
+        },
+        "away": {
+          "id": 5,
+          "name": "FC Bayern München",
+          "logo": "https://crests.football-data.org/5.png"
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "league": {
+        "id": "BL1",
+        "name": "Bundesliga",
+        "country": "",
+        "round": 11
+      }
+    },
+    {
+      "fixture": {
+        "id": 560652,
+        "date": "2026-11-28T15:00:00Z",
+        "status": {
+          "short": "NS",
+          "long": "TIMED"
+        }
+      },
+      "teams": {
+        "home": {
+          "id": 341,
+          "name": "Leeds United FC",
+          "logo": "https://crests.football-data.org/341.png"
+        },
+        "away": {
+          "id": 1076,
+          "name": "Coventry City FC",
+          "logo": "https://crests.football-data.org/1076.png"
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "league": {
+        "id": "PL",
+        "name": "Premier League",
+        "country": "",
+        "round": 12
+      }
+    },
+    {
+      "fixture": {
+        "id": 560655,
+        "date": "2026-11-28T15:00:00Z",
+        "status": {
+          "short": "NS",
+          "long": "TIMED"
+        }
+      },
+      "teams": {
+        "home": {
+          "id": 66,
+          "name": "Manchester United FC",
+          "logo": "https://crests.football-data.org/66.png"
+        },
+        "away": {
+          "id": 402,
+          "name": "Brentford FC",
+          "logo": "https://crests.football-data.org/402.png"
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "league": {
+        "id": "PL",
+        "name": "Premier League",
+        "country": "",
+        "round": 12
+      }
+    },
+    {
+      "fixture": {
+        "id": 558514,
+        "date": "2026-11-28T17:00:00Z",
+        "status": {
+          "short": "NS",
+          "long": "TIMED"
+        }
+      },
+      "teams": {
+        "home": {
+          "id": 586,
+          "name": "Torino FC",
+          "logo": "https://crests.football-data.org/586.png"
+        },
+        "away": {
+          "id": 110,
+          "name": "SS Lazio",
+          "logo": "https://crests.football-data.org/110.png"
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "league": {
+        "id": "SA",
+        "name": "Serie A",
+        "country": "",
+        "round": 13
+      }
+    },
+    {
+      "fixture": {
+        "id": 565870,
+        "date": "2026-11-28T17:30:00Z",
+        "status": {
+          "short": "NS",
+          "long": "TIMED"
+        }
+      },
+      "teams": {
+        "home": {
+          "id": 10,
+          "name": "VfB Stuttgart",
+          "logo": "https://crests.football-data.org/10.png"
+        },
+        "away": {
+          "id": 19,
+          "name": "Eintracht Frankfurt",
+          "logo": "https://crests.football-data.org/19.png"
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "league": {
+        "id": "BL1",
+        "name": "Bundesliga",
+        "country": "",
+        "round": 11
+      }
+    },
+    {
+      "fixture": {
+        "id": 560653,
+        "date": "2026-11-28T17:30:00Z",
+        "status": {
+          "short": "NS",
+          "long": "TIMED"
+        }
+      },
+      "teams": {
+        "home": {
+          "id": 349,
+          "name": "Ipswich Town FC",
+          "logo": "https://crests.football-data.org/349.png"
+        },
+        "away": {
+          "id": 58,
+          "name": "Aston Villa FC",
+          "logo": "https://crests.football-data.org/58.png"
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "league": {
+        "id": "PL",
+        "name": "Premier League",
+        "country": "",
+        "round": 12
+      }
+    },
+    {
+      "fixture": {
+        "id": 558518,
+        "date": "2026-11-28T19:45:00Z",
+        "status": {
+          "short": "NS",
+          "long": "TIMED"
+        }
+      },
+      "teams": {
+        "home": {
+          "id": 108,
+          "name": "FC Internazionale Milano",
+          "logo": "https://crests.football-data.org/108.png"
+        },
+        "away": {
+          "id": 107,
+          "name": "Genoa CFC",
+          "logo": "https://crests.football-data.org/107.png"
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "league": {
+        "id": "SA",
+        "name": "Serie A",
+        "country": "",
+        "round": 13
       }
     }
   ]
