@@ -1,6 +1,6 @@
 {
   "date": "2026-11-21",
-  "updated_at": "2026-11-21T14:06:53.302468-05:00",
+  "updated_at": "2026-11-21T20:28:21.567340-05:00",
   "source": "football-data.org",
   "matches": [
     {
@@ -6760,8 +6760,8 @@
         "id": 558525,
         "date": "2026-11-21T14:00:00Z",
         "status": {
-          "short": "NS",
-          "long": "TIMED"
+          "short": "FT",
+          "long": "FINISHED"
         }
       },
       "teams": {
@@ -6777,8 +6777,8 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 2,
+        "away": 0
       },
       "league": {
         "id": "SA",
@@ -6792,8 +6792,8 @@
         "id": 558528,
         "date": "2026-11-21T14:00:00Z",
         "status": {
-          "short": "NS",
-          "long": "TIMED"
+          "short": "FT",
+          "long": "FINISHED"
         }
       },
       "teams": {
@@ -6809,8 +6809,8 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 3,
+        "away": 0
       },
       "league": {
         "id": "SA",
@@ -7144,8 +7144,8 @@
         "id": 558526,
         "date": "2026-11-21T17:00:00Z",
         "status": {
-          "short": "NS",
-          "long": "TIMED"
+          "short": "FT",
+          "long": "FINISHED"
         }
       },
       "teams": {
@@ -7161,8 +7161,8 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 5
       },
       "league": {
         "id": "SA",
@@ -7176,8 +7176,8 @@
         "id": 565861,
         "date": "2026-11-21T17:30:00Z",
         "status": {
-          "short": "LIVE",
-          "long": "IN_PLAY"
+          "short": "FT",
+          "long": "FINISHED"
         }
       },
       "teams": {
@@ -7208,8 +7208,8 @@
         "id": 560651,
         "date": "2026-11-21T17:30:00Z",
         "status": {
-          "short": "LIVE",
-          "long": "IN_PLAY"
+          "short": "FT",
+          "long": "FINISHED"
         }
       },
       "teams": {
@@ -7226,7 +7226,7 @@
       },
       "goals": {
         "home": 2,
-        "away": 1
+        "away": 2
       },
       "league": {
         "id": "PL",
@@ -7240,8 +7240,8 @@
         "id": 558527,
         "date": "2026-11-21T19:45:00Z",
         "status": {
-          "short": "NS",
-          "long": "TIMED"
+          "short": "FT",
+          "long": "FINISHED"
         }
       },
       "teams": {
@@ -7257,8 +7257,8 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 0
       },
       "league": {
         "id": "SA",
