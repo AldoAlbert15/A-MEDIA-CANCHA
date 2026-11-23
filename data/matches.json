@@ -1,6 +1,6 @@
 {
-  "date": "2026-11-22",
-  "updated_at": "2026-11-22T20:34:21.204690-05:00",
+  "date": "2026-11-23",
+  "updated_at": "2026-11-23T02:54:49.810581-05:00",
   "source": "football-data.org",
   "matches": [
     {
@@ -9046,6 +9046,70 @@
           "id": 109,
           "name": "Juventus FC",
           "logo": "https://crests.football-data.org/109.png"
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "league": {
+        "id": "SA",
+        "name": "Serie A",
+        "country": "",
+        "round": 13
+      }
+    },
+    {
+      "fixture": {
+        "id": 558516,
+        "date": "2026-11-30T17:30:00Z",
+        "status": {
+          "short": "NS",
+          "long": "TIMED"
+        }
+      },
+      "teams": {
+        "home": {
+          "id": 5890,
+          "name": "US Lecce",
+          "logo": "https://crests.football-data.org/5890.png"
+        },
+        "away": {
+          "id": 102,
+          "name": "Atalanta BC",
+          "logo": "https://crests.football-data.org/102.png"
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "league": {
+        "id": "SA",
+        "name": "Serie A",
+        "country": "",
+        "round": 13
+      }
+    },
+    {
+      "fixture": {
+        "id": 558510,
+        "date": "2026-11-30T19:45:00Z",
+        "status": {
+          "short": "NS",
+          "long": "TIMED"
+        }
+      },
+      "teams": {
+        "home": {
+          "id": 104,
+          "name": "Cagliari Calcio",
+          "logo": "https://crests.football-data.org/104.png"
+        },
+        "away": {
+          "id": 98,
+          "name": "AC Milan",
+          "logo": "https://crests.football-data.org/98.png"
         }
       },
       "goals": {
