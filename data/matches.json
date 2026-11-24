@@ -1,40 +1,8 @@
 {
-  "date": "2026-11-23",
-  "updated_at": "2026-11-23T20:33:37.191027-05:00",
+  "date": "2026-11-24",
+  "updated_at": "2026-11-24T02:40:41.663941-05:00",
   "source": "football-data.org",
   "matches": [
-    {
-      "fixture": {
-        "id": 565820,
-        "date": "2026-10-09T18:30:00Z",
-        "status": {
-          "short": "FT",
-          "long": "FINISHED"
-        }
-      },
-      "teams": {
-        "home": {
-          "id": 4,
-          "name": "Borussia Dortmund",
-          "logo": "https://crests.football-data.org/4.png"
-        },
-        "away": {
-          "id": 12,
-          "name": "SV Werder Bremen",
-          "logo": "https://crests.football-data.org/12.png"
-        }
-      },
-      "goals": {
-        "home": 2,
-        "away": 2
-      },
-      "league": {
-        "id": "BL1",
-        "name": "Bundesliga",
-        "country": "",
-        "round": 5
-      }
-    },
     {
       "fixture": {
         "id": 560593,
@@ -9119,6 +9087,38 @@
       "league": {
         "id": "SA",
         "name": "Serie A",
+        "country": "",
+        "round": 13
+      }
+    },
+    {
+      "fixture": {
+        "id": 560668,
+        "date": "2026-12-01T20:00:00Z",
+        "status": {
+          "short": "NS",
+          "long": "TIMED"
+        }
+      },
+      "teams": {
+        "home": {
+          "id": 1076,
+          "name": "Coventry City FC",
+          "logo": "https://crests.football-data.org/1076.png"
+        },
+        "away": {
+          "id": 349,
+          "name": "Ipswich Town FC",
+          "logo": "https://crests.football-data.org/349.png"
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "league": {
+        "id": "PL",
+        "name": "Premier League",
         "country": "",
         "round": 13
       }
