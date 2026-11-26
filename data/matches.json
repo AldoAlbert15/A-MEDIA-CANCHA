@@ -1,6 +1,6 @@
 {
   "date": "2026-11-25",
-  "updated_at": "2026-11-25T14:13:45.548310-05:00",
+  "updated_at": "2026-11-25T20:39:38.062020-05:00",
   "source": "football-data.org",
   "matches": [
     {
@@ -7400,8 +7400,8 @@
         "id": 575404,
         "date": "2026-11-25T17:45:00Z",
         "status": {
-          "short": "LIVE",
-          "long": "IN_PLAY"
+          "short": "FT",
+          "long": "FINISHED"
         }
       },
       "teams": {
@@ -7432,8 +7432,8 @@
         "id": 575405,
         "date": "2026-11-25T17:45:00Z",
         "status": {
-          "short": "LIVE",
-          "long": "IN_PLAY"
+          "short": "FT",
+          "long": "FINISHED"
         }
       },
       "teams": {
@@ -7464,8 +7464,8 @@
         "id": 575406,
         "date": "2026-11-25T20:00:00Z",
         "status": {
-          "short": "NS",
-          "long": "TIMED"
+          "short": "FT",
+          "long": "FINISHED"
         }
       },
       "teams": {
@@ -7481,8 +7481,8 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 2,
+        "away": 0
       },
       "league": {
         "id": "CL",
@@ -7496,8 +7496,8 @@
         "id": 575407,
         "date": "2026-11-25T20:00:00Z",
         "status": {
-          "short": "NS",
-          "long": "TIMED"
+          "short": "FT",
+          "long": "FINISHED"
         }
       },
       "teams": {
@@ -7513,8 +7513,8 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 2,
+        "away": 0
       },
       "league": {
         "id": "CL",
@@ -7528,8 +7528,8 @@
         "id": 575408,
         "date": "2026-11-25T20:00:00Z",
         "status": {
-          "short": "NS",
-          "long": "TIMED"
+          "short": "FT",
+          "long": "FINISHED"
         }
       },
       "teams": {
@@ -7545,8 +7545,8 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 2,
+        "away": 2
       },
       "league": {
         "id": "CL",
@@ -7560,8 +7560,8 @@
         "id": 575409,
         "date": "2026-11-25T20:00:00Z",
         "status": {
-          "short": "NS",
-          "long": "TIMED"
+          "short": "FT",
+          "long": "FINISHED"
         }
       },
       "teams": {
@@ -7577,8 +7577,8 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 3
       },
       "league": {
         "id": "CL",
@@ -7592,8 +7592,8 @@
         "id": 575410,
         "date": "2026-11-25T20:00:00Z",
         "status": {
-          "short": "NS",
-          "long": "TIMED"
+          "short": "FT",
+          "long": "FINISHED"
         }
       },
       "teams": {
@@ -7609,8 +7609,8 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 2,
+        "away": 1
       },
       "league": {
         "id": "CL",
@@ -7624,8 +7624,8 @@
         "id": 575411,
         "date": "2026-11-25T20:00:00Z",
         "status": {
-          "short": "NS",
-          "long": "TIMED"
+          "short": "FT",
+          "long": "FINISHED"
         }
       },
       "teams": {
@@ -7641,8 +7641,8 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 2,
+        "away": 2
       },
       "league": {
         "id": "CL",
@@ -7656,8 +7656,8 @@
         "id": 575412,
         "date": "2026-11-25T20:00:00Z",
         "status": {
-          "short": "NS",
-          "long": "TIMED"
+          "short": "FT",
+          "long": "FINISHED"
         }
       },
       "teams": {
@@ -7673,8 +7673,8 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 1
       },
       "league": {
         "id": "CL",
